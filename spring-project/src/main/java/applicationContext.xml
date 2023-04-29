@@ -17,6 +17,15 @@
        <bean id="employeebean" class="com.simplilearn.spring.spring_project.Employee">
        <constructor-arg value="10" type="int"></constructor-arg>
        <constructor-arg value="John Wood"></constructor-arg>
+       <constructor-arg>
+       		<ref bean="addressbean" />
+       </constructor-arg>
+       </bean>
+       
+       <bean id="addressbean" class="com.simplilearn.spring.spring_project.Address">
+       		<constructor-arg value="NOIDA"></constructor-arg>
+       		<constructor-arg value="UP"></constructor-arg>
+       		<constructor-arg value="INDIA"></constructor-arg>
        </bean>
        
                
