@@ -1,4 +1,5 @@
-package com.simplilearn.spring.spring_project;
+package com.simplilearn.spring.dependency.injection.constructor;
+
 
 public class Employee {
 
@@ -20,7 +21,7 @@ public class Employee {
 		this.address = address;
 	}
 	
-	void displayEmployeeInfo() {
+	public void displayEmployeeInfo() {
 		System.out.println("Employee ID:: " + id);
 		System.out.println("Employee Name:: " + name);
 		System.out.println("Employee Address:: " + address);

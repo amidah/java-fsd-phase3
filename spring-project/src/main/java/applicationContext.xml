@@ -9,12 +9,12 @@
                
          
         <!-- Setter Dependency Injection --> 
-       <bean id = "studentbean" class="com.simplilearn.spring.spring_project.Student">
+       <bean id = "studentbean" class="com.simplilearn.spring.dependency.injection.setter.Student">
        		<property name="name" value="James Bond"></property>
        </bean>
        
        <!-- Constructor Dependency Injection -->
-       <bean id="employeebean" class="com.simplilearn.spring.spring_project.Employee">
+       <bean id="employeebean" class="com.simplilearn.spring.dependency.injection.constructor.Employee">
        <constructor-arg value="10" type="int"></constructor-arg>
        <constructor-arg value="John Wood"></constructor-arg>
        <constructor-arg>
@@ -22,11 +22,61 @@
        </constructor-arg>
        </bean>
        
-       <bean id="addressbean" class="com.simplilearn.spring.spring_project.Address">
+       <bean id="addressbean" class="com.simplilearn.spring.dependency.injection.constructor.Address">
        		<constructor-arg value="NOIDA"></constructor-arg>
        		<constructor-arg value="UP"></constructor-arg>
        		<constructor-arg value="INDIA"></constructor-arg>
        </bean>
        
-               
+       <bean id="answerbean1" class="com.simplilearn.spring.dependency.injection.constructor.collection.list.Answer">
+       	<constructor-arg name="id" value="1"></constructor-arg>
+       	<constructor-arg name="value" value="Spring Framework has two IOC Containers."></constructor-arg>
+       </bean>
+       
+       <bean id="answerbean2" class="com.simplilearn.spring.dependency.injection.constructor.collection.list.Answer">
+       	<constructor-arg name="id" value="2"></constructor-arg>
+       	<constructor-arg name="value" value="Spring Framework provides two ways of Dependency Injection."></constructor-arg>
+       </bean>
+       
+       <bean id="questionbean" class="com.simplilearn.spring.dependency.injection.constructor.collection.list.Question">
+       	<constructor-arg name="id" value="1"></constructor-arg>
+       	<constructor-arg name="name" value="How many IOC Containers Spring provides and How many ways of Dependency Injection can be performed?"></constructor-arg>
+       	<constructor-arg>
+       		<list>
+       			<ref bean="answerbean1"/>
+       			<ref bean="answerbean2"/>
+       		</list>
+       	</constructor-arg>
+       </bean>
+       
+       <bean id="ansbean1" class="com.simplilearn.spring.dependency.injection.constructor.collection.map.Answer">
+       	<constructor-arg name="id" value="1"></constructor-arg>
+       	<constructor-arg name="value" value="Spring Framework has two IOC Containers."></constructor-arg>
+       </bean>
+       
+       <bean id="ansbean2" class="com.simplilearn.spring.dependency.injection.constructor.collection.map.Answer">
+       	<constructor-arg name="id" value="2"></constructor-arg>
+       	<constructor-arg name="value" value="Spring Framework provides two ways of Dependency Injection."></constructor-arg>
+       </bean>
+       
+       <bean id="quesbean1" class="com.simplilearn.spring.dependency.injection.constructor.collection.map.Question">
+       	<constructor-arg name="id" value="1"></constructor-arg>
+       	<constructor-arg name="name" value="How many IOC Containers Spring provides?"></constructor-arg>
+       </bean>
+       
+       <bean id="quesbean2" class="com.simplilearn.spring.dependency.injection.constructor.collection.map.Question">
+       	<constructor-arg name="id" value="2"></constructor-arg>
+       	<constructor-arg name="name" value="How many ways of Dependency Injection can be performed?"></constructor-arg>
+       </bean>
+       
+       <bean id="quesansmapbean" class="com.simplilearn.spring.dependency.injection.constructor.collection.map.QuestionAnswerMap">
+       	<constructor-arg name="id" value="1"></constructor-arg>
+       	<constructor-arg>
+       		<map>
+       			<entry key-ref="quesbean1" value-ref="ansbean1"></entry>
+       			<entry key-ref="quesbean2" value-ref="ansbean2"></entry>
+       		</map>
+       	</constructor-arg>
+       </bean>
+       
  </beans>

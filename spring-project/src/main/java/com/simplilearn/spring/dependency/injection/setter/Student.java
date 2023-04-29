@@ -1,4 +1,4 @@
-package com.simplilearn.spring.spring_project;
+package com.simplilearn.spring.dependency.injection.setter;
 
 public class Student {
 	
