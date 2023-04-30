@@ -1,20 +1,20 @@
-package com.simplilearn.spring.dependency.injection.autowiring.byname;
+package com.simplilearn.spring.dependency.injection.autowiring.bynamebytype;
 
 public class Library {
 	
-	private Book book;
-
-	public Library() {
-		super();
-		System.out.println("Library is created ...");
-	}
-
+	private Book book;	
+	
 	public Book getBook() {
 		return book;
 	}
 
 	public void setBook(Book book) {
 		this.book = book;
+	}
+
+	public Library() {
+		super();
+		System.out.println("Library is created ...");
 	}
 	
 	public void libraryInfo() {

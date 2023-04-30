@@ -1,4 +1,4 @@
-package com.simplilearn.spring.dependency.injection.autowiring.byname;
+package com.simplilearn.spring.dependency.injection.autowiring.bynamebytype;
 
 public class Book {
 	
