@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import com.simplilearn.spring.dependency.injection.autowiring.byname.Library;
 import com.simplilearn.spring.dependency.injection.constructor.Employee;
 import com.simplilearn.spring.dependency.injection.constructor.collection.list.Question;
 import com.simplilearn.spring.dependency.injection.constructor.collection.map.QuestionAnswerMap;
@@ -40,6 +41,9 @@ public class App
         QuestionAnswerMap questionAnswerMap = (QuestionAnswerMap)appContext.getBean("quesansmapbean");
         System.out.println(questionAnswerMap);
           
+        Library library = (Library)appContext.getBean("librarybean");
+        
+        library.display();
         
     }
 }

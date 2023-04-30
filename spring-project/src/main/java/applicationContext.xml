@@ -79,4 +79,18 @@
        	</constructor-arg>
        </bean>
        
+       <!--autowiring by name -->
+       <bean id="book" class="com.simplilearn.spring.dependency.injection.autowiring.byname.Book">
+       	<constructor-arg name="isbn" value="99123456"></constructor-arg>
+       	<constructor-arg name="price" value="1000.00"></constructor-arg>
+       	<constructor-arg name="bookType" value="fiction"></constructor-arg>
+       </bean>
+       
+       <bean id="librarybean" class="com.simplilearn.spring.dependency.injection.autowiring.byname.Library" autowire="byName">	
+       </bean>
+       
+       
+       
+       
+       
  </beans>
