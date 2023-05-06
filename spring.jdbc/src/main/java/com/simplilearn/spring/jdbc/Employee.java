@@ -8,6 +8,13 @@ public class Employee {
 	
 	private float salary;
 
+
+	public Employee (int id) {
+
+		this.id = id;
+	}
+
+
 	public Employee(int id, String name, float salary) {
 		super();
 		this.id = id;
