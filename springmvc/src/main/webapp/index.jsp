@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Welcome to my Spring MVC Web Application!!!</h2>
+<a href="hello">CLICK HERE...</a>
 </body>
 </html>

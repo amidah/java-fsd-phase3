@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SpringMVCController {
 
-	@RequestMapping("/")
+	@RequestMapping("/helloagain")
 	public String display() {
-		return "MVC Controller Called ...";
+		return "final";
 	}
 	
+	@RequestMapping("/hello")
+	public String redirect() {
+		return "viewpage";
+	}
 }
