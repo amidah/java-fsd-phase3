@@ -1,4 +1,4 @@
-package com.simplilearn.springbootmvcapp;
+package com.simplilearn.springbootmvcapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
