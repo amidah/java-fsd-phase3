@@ -1,14 +1,15 @@
 package com.simplilearn.springbootmvcapp.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HomeController {
 	
-	@RequestMapping("/")
-	public String home() {
-		return "home.jspp";
+	@GetMapping("/hello")
+	public String hello() {
+		return "Hello User, how are you?";
 	}
 
 }
