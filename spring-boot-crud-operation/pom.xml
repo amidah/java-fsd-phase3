@@ -47,6 +47,13 @@
 			<version>1.7.0</version>
 		</dependency>
 
+	<!-- don't use this dependency when you will try to learn about springdoc swagger implementation -->
+	
+	<!-- use it once you will go through all the api using swagger ui link: http://localhost:8086/swagger-ui/index.html#/-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
